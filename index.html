@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>jvmes</title>
   <meta name="description" content="Grounded websites for small businesses that need something clear, capable, and built to last." />
-  <meta name="theme-color" content="#e8dfd1" />
+  <meta name="theme-color" content="#0f1115" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
@@ -14,7 +14,13 @@
 <body>
   <header class="site-header">
     <div class="wrap site-header__inner">
-      <a class="brand" href="#top">jvmes</a>
+      <a class="brand" href="#top" aria-label="jvmes home">
+        <span class="brand__mark" aria-hidden="true">
+          <img class="brand__ghost" src="images/ghost-mark.svg" alt="" />
+        </span>
+        <span class="brand__text">jvmes</span>
+      </a>
+
       <nav class="nav" aria-label="Primary navigation">
         <a href="#services">services</a>
         <a href="#work">work</a>
@@ -30,6 +36,7 @@
           <p class="kicker">steady work. clean execution.</p>
           <h1>Grounded websites with a bit of weight to them.</h1>
           <p class="lead">Built for small businesses that want something calm, capable, and solid - not glossy for the sake of it.</p>
+
           <div class="hero__actions">
             <a class="button button--solid" href="mailto:hi@jvmes.co">email me</a>
             <a class="button button--ghost" href="#work">view work</a>
@@ -37,8 +44,12 @@
         </div>
 
         <aside class="hero-note" aria-label="approach summary">
-          <span class="hero-note__line"></span>
-          <p>Clear structure, earthy restraint, and a practical feel. Built to reflect work done in the real world.</p>
+          <div class="hero-note__top">
+            <span class="hero-note__line"></span>
+            <img class="hero-note__ghost" src="images/ghost-mark.svg" alt="" />
+          </div>
+          <p>Clear structure, darker tone, a bit more identity, and enough restraint to still feel client-facing.</p>
+          <div class="hero-note__meta">Built to feel more finished without getting loud.</div>
         </aside>
       </div>
     </section>
@@ -58,10 +69,12 @@
             <h3>Landing pages</h3>
             <p>Single-page websites for trades, service businesses, and operators who need a sharp online presence without unnecessary clutter.</p>
           </article>
+
           <article class="card">
             <h3>Small business websites</h3>
             <p>Clear service pages, straightforward contact flow, and a professional feel that helps people trust what they are looking at.</p>
           </article>
+
           <article class="card">
             <h3>Website refreshes</h3>
             <p>Reworks for tired or messy sites that need better pacing, cleaner structure, and a more grounded visual direction.</p>
@@ -88,6 +101,7 @@
             </div>
             <small>HTML / CSS</small>
           </article>
+
           <article class="work-item">
             <div>
               <strong>More coming soon</strong>
