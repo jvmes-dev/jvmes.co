@@ -301,6 +301,24 @@ h1 {
   gap: 18px;
 }
 
+.work-item {
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 60px rgba(30, 25, 20, 0.12);
+}
+
+.work-item small {
+  transition: opacity 0.2s ease;
+}
+
+.work-item:hover small {
+  opacity: 1;
+}
+
 .card,
 .work-item,
 .contact-box {
