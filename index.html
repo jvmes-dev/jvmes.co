@@ -4,303 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>jvmes</title>
-  <meta name="description" content="Clean, fast websites for small businesses." />
-  <meta name="theme-color" content="#ffffff" />
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #666666;
-      --line: #e9e9e9;
-      --max: 960px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .wrap {
-      width: min(calc(100% - 2rem), var(--max));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .site-header .wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 68px;
-      gap: 1rem;
-    }
-
-    .brand {
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: lowercase;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .nav a:hover,
-    .contact-link:hover,
-    .footer a:hover {
-      color: var(--text);
-    }
-
-    .hero {
-      padding: 7rem 0 5rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      gap: 2rem;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.6rem, 7vw, 5.75rem);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
-      font-weight: 700;
-      text-transform: lowercase;
-    }
-
-    .hero-copy {
-      max-width: 640px;
-    }
-
-    .lead {
-      margin: 1.5rem 0 0;
-      font-size: clamp(1.05rem, 2vw, 1.3rem);
-      color: var(--muted);
-      max-width: 38rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      margin-top: 2rem;
-    }
-
-    .button,
-    .button-ghost {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0.8rem 1.1rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: 0.2s ease;
-      border: 1px solid var(--text);
-    }
-
-    .button {
-      background: var(--text);
-      color: #ffffff;
-    }
-
-    .button:hover {
-      opacity: 0.88;
-    }
-
-    .button-ghost {
-      border-color: var(--line);
-      color: var(--text);
-      background: transparent;
-    }
-
-    .button-ghost:hover {
-      border-color: var(--text);
-    }
-
-    section {
-      padding: 2.5rem 0;
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 1rem;
-      padding: 1.5rem 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: clamp(1.35rem, 2vw, 2rem);
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-    }
-
-    .text {
-      color: var(--muted);
-      max-width: 44rem;
-      font-size: 1rem;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 1.25rem;
-    }
-
-    .card h3 {
-      margin: 0 0 0.65rem;
-      font-size: 1rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .work-list {
-      display: grid;
-      gap: 0;
-      margin-top: 0.5rem;
-      border-top: 1px solid var(--line);
-    }
-
-    .work-item {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 1rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .work-item strong {
-      display: block;
-      margin-bottom: 0.25rem;
-      font-size: 1rem;
-    }
-
-    .work-item span,
-    .work-item small {
-      color: var(--muted);
-    }
-
-    .contact {
-      padding-bottom: 5rem;
-    }
-
-    .contact-box {
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .contact-box p {
-      margin: 0 0 1rem;
-      color: var(--muted);
-      max-width: 32rem;
-    }
-
-    .contact-link {
-      font-size: 1.05rem;
-      font-weight: 600;
-      word-break: break-word;
-    }
-
-    .footer {
-      border-top: 1px solid var(--line);
-      padding: 1.2rem 0 2rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .footer .wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 800px) {
-      .section-head {
-        grid-template-columns: 1fr;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .site-header .wrap {
-        min-height: 60px;
-      }
-
-      .nav {
-        gap: 0.9rem;
-        font-size: 0.9rem;
-      }
-
-      .hero {
-        padding: 4.5rem 0 3rem;
-      }
-
-      .work-item {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta name="description" content="Grounded websites for small businesses that need something clear, capable, and built to last." />
+  <meta name="theme-color" content="#e8dfd1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap">
+    <div class="wrap site-header__inner">
       <a class="brand" href="#top">jvmes</a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#services">services</a>
@@ -312,94 +25,100 @@
 
   <main id="top">
     <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <h1>clean, fast websites for small businesses.</h1>
-          <p class="lead">I build simple websites that look sharp, load fast, and make it easy for people to get in touch.</p>
-          <div class="hero-actions">
-            <a class="button" href="mailto:hi@jvmes.co">start a project</a>
-            <a class="button-ghost" href="#work">view work</a>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="kicker">steady work. clean execution.</p>
+          <h1>Grounded websites with a bit of weight to them.</h1>
+          <p class="lead">Built for small businesses that want something calm, capable, and solid - not glossy for the sake of it.</p>
+          <div class="hero__actions">
+            <a class="button button--solid" href="mailto:hi@jvmes.co">email me</a>
+            <a class="button button--ghost" href="#work">view work</a>
           </div>
         </div>
+
+        <aside class="hero-note" aria-label="approach summary">
+          <span class="hero-note__line"></span>
+          <p>Clear structure, earthy restraint, and a practical feel. Built to reflect work done in the real world.</p>
+        </aside>
       </div>
     </section>
 
-    <section id="services">
+    <section id="services" class="section">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">services</div>
           <div>
-            <h2>Built to stay simple.</h2>
-            <p class="text">No bloated stack. No messy builder handoff. Just a clean site, clear structure, and a setup that is easy to manage.</p>
+            <h2>Simple by design.</h2>
+            <p class="text">No bloated handoff. No pile of plugins. Just a clean structure, strong copy, and a site that feels dependable from the first scroll.</p>
           </div>
         </div>
 
-        <div class="services">
+        <div class="services-grid">
           <article class="card">
             <h3>Landing pages</h3>
-            <p>Single-page sites for freelancers, trades, services, and small brands that need a clean online presence.</p>
+            <p>Single-page websites for trades, service businesses, and operators who need a sharp online presence without unnecessary clutter.</p>
           </article>
           <article class="card">
             <h3>Small business websites</h3>
-            <p>Fast brochure-style websites with clear services, strong contact flow, and a professional feel.</p>
+            <p>Clear service pages, straightforward contact flow, and a professional feel that helps people trust what they are looking at.</p>
           </article>
           <article class="card">
             <h3>Website refreshes</h3>
-            <p>Clean rebuilds for old or cluttered websites that need better structure, speed, and polish.</p>
+            <p>Reworks for tired or messy sites that need better pacing, cleaner structure, and a more grounded visual direction.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="work">
+    <section id="work" class="section">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">work</div>
           <div>
             <h2>Selected work.</h2>
-            <p class="text">A small set of clean builds with a focus on clarity, speed, and simple structure.</p>
+            <p class="text">A small body of clean builds with an emphasis on trust, clarity, and restraint.</p>
           </div>
         </div>
 
         <div class="work-list">
-          <div class="work-item">
+          <article class="work-item">
             <div>
               <strong>Steve’s Gumby Gumby</strong>
-              <span>Small business product website built for clarity, trust, and simple ordering.</span>
+              <span>Product-led small business website focused on clarity, trust, and simple ordering.</span>
             </div>
             <small>HTML / CSS</small>
-          </div>
-          <div class="work-item">
+          </article>
+          <article class="work-item">
             <div>
               <strong>More coming soon</strong>
-              <span>New client work and focused landing pages will be added here as they go live.</span>
+              <span>Further client work and focused landing pages will be added here as they go live.</span>
             </div>
             <small>In progress</small>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="section contact-section">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">contact</div>
           <div>
             <h2>Ready when you are.</h2>
-            <p class="text">If you need a clean website without the usual mess, send through a short outline of what you need and I’ll get back to you.</p>
+            <p class="text">If you need a clean website with a bit more character and a lot less noise, send through a short outline and I’ll get back to you.</p>
           </div>
         </div>
 
         <div class="contact-box">
-          <p>Best first step: send a short email with your business name, what you need, and any example websites you like.</p>
+          <p>Best first step: send your business name, what you need, and any examples you like.</p>
           <a class="contact-link" href="mailto:hi@jvmes.co">hi@jvmes.co</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
       <span>jvmes</span>
       <a href="mailto:hi@jvmes.co">hi@jvmes.co</a>
     </div>
